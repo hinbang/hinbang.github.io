@@ -105,12 +105,12 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Chenxxxxxxuanbang&#39;s Blog">
+<meta property="og:title" content="cxxxxxxb">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Chenxxxxxxuanbang&#39;s Blog">
+<meta property="og:site_name" content="cxxxxxxb">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chenxxxxxxuanbang&#39;s Blog">
+<meta name="twitter:title" content="cxxxxxxb">
 
 
 
@@ -127,7 +127,7 @@
   };
 </script>
 
-  <title>Chenxxxxxxuanbang's Blog</title>
+  <title>cxxxxxxb</title>
   
 
 
@@ -187,7 +187,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Chenxxxxxxuanbang's Blog</span>
+        <span class="site-title">cxxxxxxb</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -348,6 +348,192 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/22/foolish-everyday/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChenXuanbang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="cxxxxxxb">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/12/22/foolish-everyday/" class="post-title-link" itemprop="http://yoursite.com/index.html">Foolish_Everyday</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-22 23:34:06" itemprop="dateCreated datePublished" datetime="2018-12-22T23:34:06+08:00">2018-12-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-12-26 10:11:06" itemprop="dateModified" datetime="2018-12-26T10:11:06+08:00">2018-12-26</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/22/foolish-everyday/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/22/foolish-everyday/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<p><strong>2018-12-23</strong></p>
+<ul>
+<li>更改以太网口传输速率:设备管理器-网络适配器</li>
+<li>KCP<ul>
+<li>牺牲带宽换取网络传输速率 <em>为什么这么说呢？</em> </li>
+<li>KCP没有规定下层传输协议，一般用UDP作为下层传输协议</li>
+<li>KCP提高速率的方法<ol>
+<li>RTO/Retransmission Timeout  ： <em>TCP 2xRTO，UDP 1.5xRTO</em> 。</li>
+<li>快重传机制 ：发送端发送了1,2,3,4,5几个包，然后收到远端的ACK: 1, 3, 4, 5，当收到ACK3时，   KCP知道2被跳过1次，收到ACK4时，知道2被跳过了2次，此时可以认为2号丢失，不用等超时，直接重传2号包，大大改善了丢包时的传输速度。</li>
+<li>选择重传 ：TCP丢包时会全部重传从丢的那个包开始以后的数据，KCP是选择性重传，只重传真正丢失的数据包。</li>
+<li>非延迟ACK ：TCP为了充分利用带宽，延迟发送ACK（NODELAY都没用），这样超时计算会算出较大的RTT时间，延长了丢包时的判断过程。KCP的ACK是否延迟发送可以调节。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p><strong>2018-12-25</strong></p>
+<ol>
+<li>aaaaaa</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/22/IP_DDR3/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -357,7 +543,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Chenxxxxxxuanbang's Blog">
+      <meta itemprop="name" content="cxxxxxxb">
     </span>
 
     
@@ -393,7 +579,7 @@
                 
               
 
-              <time title="Created: 2018-12-22 11:25:31 / Modified: 19:12:53" itemprop="dateCreated datePublished" datetime="2018-12-22T11:25:31+08:00">2018-12-22</time>
+              <time title="Created: 2018-12-22 11:25:31 / Modified: 23:31:11" itemprop="dateCreated datePublished" datetime="2018-12-22T11:25:31+08:00">2018-12-22</time>
             
 
             
@@ -469,7 +655,8 @@
       
         
           
-            <h3 id="Vivado-DDR3-IP核例化"><a href="#Vivado-DDR3-IP核例化" class="headerlink" title="Vivado-DDR3-IP核例化"></a>Vivado-DDR3-IP核例化</h3>
+            <p>Vivado-DDR3-IP核例化，</p>
+
           
         
       
@@ -555,7 +742,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -595,7 +782,7 @@
                   
                     
                   
-                  <a href="https://github.com/yourname" title="GitHub &rarr; https://github.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/hinbang" title="GitHub &rarr; https://github.com/hinbang" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -606,7 +793,7 @@
                   
                     
                   
-                  <a href="mailto:yourname@gmail.com" title="E-Mail &rarr; mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  <a href="/chenxuanbang2018@gmail.com" title="E-Mail &rarr; chenxuanbang2018@gmail.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
                 <span class="links-of-author-item">
