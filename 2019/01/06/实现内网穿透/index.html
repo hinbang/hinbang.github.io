@@ -104,24 +104,24 @@
 
 
 
-  <meta name="description" content="WHAT YOU HAVE TO KNOW IS THAT I AM A HANDSOME MAN">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Something About Me">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="简介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FRP:frp实现内网穿透（转）">
+<meta property="og:url" content="http://yoursite.com/2019/01/06/实现内网穿透/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
-<meta property="og:description" content="WHAT YOU HAVE TO KNOW IS THAT I AM A HANDSOME MAN">
+<meta property="og:description" content="简介">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-26T03:23:31.673Z">
+<meta property="og:updated_time" content="2019-01-06T14:23:18.478Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Something About Me">
-<meta name="twitter:description" content="WHAT YOU HAVE TO KNOW IS THAT I AM A HANDSOME MAN">
+<meta name="twitter:title" content="FRP:frp实现内网穿透（转）">
+<meta name="twitter:description" content="简介">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/06/实现内网穿透/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>Something About Me | cxxxxxxb</title>
+  <title>FRP:frp实现内网穿透（转） | cxxxxxxb</title>
   
 
 
@@ -238,7 +238,7 @@
         
         
           
-          <li class="menu-item menu-item-about menu-item-active">
+          <li class="menu-item menu-item-about">
 
     
     
@@ -331,73 +331,191 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/实现内网穿透/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChenXuanbang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="cxxxxxxb">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">Something About Me
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h1 id="WHAT-YOU-HAVE-TO-KNOW-IS-THAT-I-AM-A-HANDSOME-MAN"><a href="#WHAT-YOU-HAVE-TO-KNOW-IS-THAT-I-AM-A-HANDSOME-MAN" class="headerlink" title="WHAT YOU HAVE TO KNOW IS THAT I AM A HANDSOME MAN"></a>WHAT YOU HAVE TO KNOW IS THAT I AM A HANDSOME MAN</h1>
+          <h1 class="post-title" itemprop="name headline">FRP:frp实现内网穿透（转）
+
+              
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-06 21:36:46 / Modified: 22:23:18" itemprop="dateCreated datePublished" datetime="2019-01-06T21:36:46+08:00">2019-01-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/06/实现内网穿透/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/06/实现内网穿透/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><a id="more"></a>
+<ul>
+<li>frp 是一个高性能的反向代理应用，可以帮助您轻松地进行内网穿透，对外网提供服务，支持 tcp, udp, http, https 等协议类型，并且 web 服务支持根据域名进行路由转发。</li>
+<li>这里主要说下怎么内网穿透，实际按照教程，自己将 NAT VPS 做端口转发之类的也是完全一样的。</li>
+</ul>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><ul>
+<li>FRP 的原理挺容易理解的：公网服务器和内网客户端建立连接，外网用户先去访问公网服务器特定端口，触发公网服务器和内网的互动，并返回信息给外网用户。</li>
+</ul>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+
+     <div>
+        
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+        
+     </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/22/foolish-everyday/" rel="next" title="Foolish_Everyday">
+                <i class="fa fa-chevron-left"></i> Foolish_Everyday
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -563,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WHAT-YOU-HAVE-TO-KNOW-IS-THAT-I-AM-A-HANDSOME-MAN"><span class="nav-text">WHAT YOU HAVE TO KNOW IS THAT I AM A HANDSOME MAN</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原理"><span class="nav-text">原理</span></a></li></ol></div>
             
 
           </div>
@@ -732,9 +850,9 @@
   
     <script>
       var disqus_config = function () {
-        this.page.url = "http://yoursite.com/about/index.html";
-        this.page.identifier = "about/index.html";
-        this.page.title = 'Something About Me';
+        this.page.url = "http://yoursite.com/2019/01/06/实现内网穿透/";
+        this.page.identifier = "2019/01/06/实现内网穿透/";
+        this.page.title = 'FRP:frp实现内网穿透（转）';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
