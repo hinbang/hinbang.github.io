@@ -104,17 +104,17 @@
 
 
 
-  <meta name="description" content="简介">
+  <meta name="description" content="背景 很多时候，我们都有这样的需求：需要将本地正在开发的服务暴露在公网上，也就是从外网直接访问我们本机上的服务。 正常情况下，这是办不到的，因为我们的本机并没有公网 IP，我们的本机处在内网当中。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FRP:frp实现内网穿透（转）">
 <meta property="og:url" content="http://yoursite.com/2019/01/06/实现内网穿透/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
-<meta property="og:description" content="简介">
+<meta property="og:description" content="背景 很多时候，我们都有这样的需求：需要将本地正在开发的服务暴露在公网上，也就是从外网直接访问我们本机上的服务。 正常情况下，这是办不到的，因为我们的本机并没有公网 IP，我们的本机处在内网当中。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-06T14:23:18.478Z">
+<meta property="og:updated_time" content="2019-01-07T03:47:41.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FRP:frp实现内网穿透（转）">
-<meta name="twitter:description" content="简介">
+<meta name="twitter:description" content="背景 很多时候，我们都有这样的需求：需要将本地正在开发的服务暴露在公网上，也就是从外网直接访问我们本机上的服务。 正常情况下，这是办不到的，因为我们的本机并没有公网 IP，我们的本机处在内网当中。">
 
 
 
@@ -394,12 +394,24 @@
                 
               
 
-              <time title="Created: 2019-01-06 21:36:46 / Modified: 22:23:18" itemprop="dateCreated datePublished" datetime="2019-01-06T21:36:46+08:00">2019-01-06</time>
+              <time title="Created: 2019-01-06 21:36:46" itemprop="dateCreated datePublished" datetime="2019-01-06T21:36:46+08:00">2019-01-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-07 11:47:41" itemprop="dateModified" datetime="2019-01-07T11:47:41+08:00">2019-01-07</time>
               
             
           </span>
@@ -443,14 +455,33 @@
       
 
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><a id="more"></a>
-<ul>
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><ul>
+<li>很多时候，我们都有这样的需求：需要将本地正在开发的服务暴露在公网上，也就是从外网直接访问我们本机上的服务。</li>
+<li>正常情况下，这是办不到的，因为我们的本机并没有公网 IP，我们的本机处在内网当中。<a id="more"></a>
+<h2 id="NAT-穿透原理"><a href="#NAT-穿透原理" class="headerlink" title="NAT 穿透原理"></a>NAT 穿透原理</h2>我们的机器一般都在路由器的内网当中，IP 地址基本上都是192.168.x.x系列，我们并没有公网 IP，那么如何访问外网呢？</li>
+<li>我们打开浏览器访问 Google，Google 与我们主机之间如何通信？<br>假设我们主机 IP 为192.168.0.100，路由器 LAN IP 为192.168.0.1，WAN IP 为211.22.145.234（这是一个公网 IP），Google 服务器 IP 为74.125.204.101。</li>
+<li>详细通信流程如下：<ul>
+<li>主机构建 HTTP 请求数据包，目标 IP 为74.125.204.101，目标端口80/443，源 IP 为192.168.0.100，源端口随机生成，假定为5000。</li>
+<li>主机检查目标 IP 地址，发现不在一个网段，数据包丢给默认网关192.168.0.1。</li>
+<li>路由器 LAN 口收到数据包，构建 NAT 映射，随机生成端口，假定为5500，这样映射就是 :5500 -&gt; 192.168.0.100:5000。WAN 口收到的数据包，如果目标端口是5500，则转发给内网 IP 为192.168.0.100的机器的5000端口。</li>
+<li>路由器修改数据包的源端口为5500，源 IP 地址为211.22.145.234，使用 WAN 口将数据包发送出去。</li>
+<li>Google 服务器收到请求，构建响应 HTTP 数据包，目标 IP 地址211.22.145.234，目标端口为5500。</li>
+<li>路由器 WAN 口收到数据包，目标端口为5500，查询 NAT 表，发现对应的机器是192.168.0.100:5000，所以修改目标 IP 为192.168.0.100，目标端口为5000。并通过 LAN 口发送给主机。</li>
+<li>主机接收到数据包，完成这一次通信。</li>
+</ul>
+</li>
+</ul>
+<pre><code>从上面可以看出，内网机器能够和外网通信，全靠拥有公网 IP 的路由器做交通枢纽。
+路由器通过查询 NAT 表，来确定数据包该发送给内网哪台机器。
+所以内网多台机器都可以通过这一台路由器和外网进行通信。这极大的节省了宝贵的公网 IP 资源。
+</code></pre><h1 id="FRP简介"><a href="#FRP简介" class="headerlink" title="FRP简介"></a>FRP简介</h1><ul>
 <li>frp 是一个高性能的反向代理应用，可以帮助您轻松地进行内网穿透，对外网提供服务，支持 tcp, udp, http, https 等协议类型，并且 web 服务支持根据域名进行路由转发。</li>
 <li>这里主要说下怎么内网穿透，实际按照教程，自己将 NAT VPS 做端口转发之类的也是完全一样的。</li>
 </ul>
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><ul>
+<h1 id="FRP原理"><a href="#FRP原理" class="headerlink" title="FRP原理"></a>FRP原理</h1><ul>
 <li>FRP 的原理挺容易理解的：公网服务器和内网客户端建立连接，外网用户先去访问公网服务器特定端口，触发公网服务器和内网的互动，并返回信息给外网用户。</li>
 </ul>
+<p><a href="https://blog.liyuans.com/archives/frp.html" target="_blank" rel="noopener">FRP实现内网穿透（全文）</a></p>
 
       
     </div>
@@ -681,7 +712,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原理"><span class="nav-text">原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT-穿透原理"><span class="nav-text">NAT 穿透原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FRP简介"><span class="nav-text">FRP简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FRP原理"><span class="nav-text">FRP原理</span></a></li></ol></div>
             
 
           </div>
@@ -726,6 +757,11 @@
 
 
 
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共1.1k字</span>
+</div>
 
         
 
