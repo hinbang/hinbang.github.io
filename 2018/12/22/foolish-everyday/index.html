@@ -60,10 +60,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.6.0">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
@@ -104,17 +104,14 @@
 
 
 
-  <meta name="description" content="2018-12-23  更改以太网口传输速率:设备管理器-网络适配器 KCP 牺牲带宽换取网络传输速率 为什么这么说呢？  KCP没有规定下层传输协议，一般用UDP作为下层传输协议 KCP提高速率的方法 RTO/Retransmission Timeout  ： TCP 2xRTO，UDP 1.5xRTO 。 快重传机制 ：发送端发送了1,2,3,4,5几个包，然后收到远端的ACK: 1, 3,">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="Foolish_Everyday">
 <meta property="og:url" content="http://yoursite.com/2018/12/22/foolish-everyday/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
-<meta property="og:description" content="2018-12-23  更改以太网口传输速率:设备管理器-网络适配器 KCP 牺牲带宽换取网络传输速率 为什么这么说呢？  KCP没有规定下层传输协议，一般用UDP作为下层传输协议 KCP提高速率的方法 RTO/Retransmission Timeout  ： TCP 2xRTO，UDP 1.5xRTO 。 快重传机制 ：发送端发送了1,2,3,4,5几个包，然后收到远端的ACK: 1, 3,">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-06T06:40:20.969Z">
+<meta property="og:updated_time" content="2019-01-08T12:07:05.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Foolish_Everyday">
-<meta name="twitter:description" content="2018-12-23  更改以太网口传输速率:设备管理器-网络适配器 KCP 牺牲带宽换取网络传输速率 为什么这么说呢？  KCP没有规定下层传输协议，一般用UDP作为下层传输协议 KCP提高速率的方法 RTO/Retransmission Timeout  ： TCP 2xRTO，UDP 1.5xRTO 。 快重传机制 ：发送端发送了1,2,3,4,5几个包，然后收到远端的ACK: 1, 3,">
 
 
 
@@ -411,7 +408,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-06 14:40:20" itemprop="dateModified" datetime="2019-01-06T14:40:20+08:00">2019-01-06</time>
+                <time title="Modified: 2019-01-08 20:07:05" itemprop="dateModified" datetime="2019-01-08T20:07:05+08:00">2019-01-08</time>
               
             
           </span>
@@ -456,26 +453,29 @@
 
       
         <hr>
-<p><strong>2018-12-23</strong></p>
-<ol>
+<a id="more"></a>
+<h1 id="2018-12-23"><a href="#2018-12-23" class="headerlink" title="2018-12-23"></a>2018-12-23</h1><ol>
 <li>更改以太网口传输速率:设备管理器-网络适配器</li>
-<li>KCP<ul>
+<li>KCP<ol>
 <li>牺牲带宽换取网络传输速率 <em>为什么这么说呢？</em> </li>
 <li>KCP没有规定下层传输协议，一般用UDP作为下层传输协议</li>
-<li>KCP提高速率的方法<ol>
+<li>KCP提高速率的方法<ul>
 <li>RTO/Retransmission Timeout  ： <em>TCP 2xRTO，UDP 1.5xRTO</em> 。</li>
 <li>快重传机制 ：发送端发送了1,2,3,4,5几个包，然后收到远端的ACK: 1, 3, 4, 5，当收到ACK3时，   KCP知道2被跳过1次，收到ACK4时，知道2被跳过了2次，此时可以认为2号丢失，不用等超时，直接重传2号包，大大改善了丢包时的传输速度。</li>
 <li>选择重传 ：TCP丢包时会全部重传从丢的那个包开始以后的数据，KCP是选择性重传，只重传真正丢失的数据包。</li>
 <li>非延迟ACK ：TCP为了充分利用带宽，延迟发送ACK（NODELAY都没用），这样超时计算会算出较大的RTT时间，延长了丢包时的判断过程。KCP的ACK是否延迟发送可以调节。</li>
-</ol>
-</li>
 </ul>
 </li>
 </ol>
+</li>
+</ol>
 <hr>
-<p><strong>2018-12-26</strong></p>
-<ol>
-<li></li>
+<h1 id="2019-1-8"><a href="#2019-1-8" class="headerlink" title="2019-1-8"></a>2019-1-8</h1><ol>
+<li><p>FileZilla没有解压缩功能.即使你使用的FileZilla,也需要与SSH命令行搭配使用.使用SSH命令行连接远端服务器和解压缩上传文件命令：<br><code>ssh 用户名@IP -p 端口号</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[username]$ scp help</span><br><span class="line">usage: scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]</span><br><span class="line">           [-l limit] [-o ssh_option] [-P port] [-S program]</span><br><span class="line">           [[user@]host1:]file1 ... [[user@]host2:]file2</span><br><span class="line"></span><br><span class="line">-1                        强制scp命令使用协议ssh1 </span><br><span class="line">-2                        强制scp命令使用协议ssh2 </span><br><span class="line">-4                        强制scp命令只使用IPv4寻址 </span><br><span class="line">-6                        强制scp命令只使用IPv6寻址 </span><br><span class="line">-B                        使用批处理模式（传输过程中不询问传输口令或短语） </span><br><span class="line">-C                        允许压缩。（将-C标志传递给ssh，从而打开压缩功能） </span><br><span class="line">-p                         保留原文件的修改时间，访问时间和访问权限。 </span><br><span class="line">-q                         不显示传输进度条。 </span><br><span class="line">-r                          递归复制整个目录。 </span><br><span class="line">-v                          详细方式显示输出。scp和ssh(1)会显示出整个过程的调试信息。这些信息用于调试连接，验证和配置问题。 </span><br><span class="line">-c cipher              以cipher将数据传输进行加密，这个选项将直接传递给ssh。 </span><br><span class="line">-F ssh_config      指定一个替代的ssh配置文件，此参数直接传递给ssh。 </span><br><span class="line">-i identity_file      从指定文件中读取传输时使用的密钥文件，此参数直接传递给ssh。 </span><br><span class="line">-l limit                    限定用户所能使用的带宽，以Kbit/s为单位。 </span><br><span class="line">-o ssh_option      如果习惯于使用ssh_config(5)中的参数传递方式， </span><br><span class="line">-P port                  注意是大写的P, port是指定数据传输用到的端口号 </span><br><span class="line">-S program         指定加密传输时所使用的程序。此程序必须能够理解ssh(1)的选项。</span><br></pre></td></tr></table></figure>
+<p>如果你要解压缩文件的话,cd到相关目录之后<br>参考<a href="https://blog.csdn.net/yishengzhiai005/article/details/53168285" target="_blank" rel="noopener">Mac terminal下解压缩命令大全</a></p>
+</li>
+<li>什么是nas，什么是群晖？<br>Nas是（Network Attached Storage网络附属存储）的简称<br>群晖作为nas，通过DiskStation Manager (DSM)是网页界面的直觉式操作系统，可帮助用户管理存于Synology DiskStation和RackStation里的文件、照片、音乐、视频以及其他重要内容。DiskStation Manager可实现的不仅是存储资料，用户还可以自行设置应用程序与选择所需要的服务。</li>
 </ol>
 
       
@@ -582,8 +582,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -600,7 +609,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -693,6 +702,22 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-12-23"><span class="nav-text">2018-12-23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-1-8"><span class="nav-text">2019-1-8</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -734,7 +759,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.1k字</span>
+  <span class="post-count">博客全站共1.6k字</span>
 </div>
 
         

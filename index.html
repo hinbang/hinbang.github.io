@@ -60,10 +60,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.6.0">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
@@ -348,6 +348,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/08/Computer-network/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChenXuanbang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="cxxxxxxb">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/01/08/Computer-network/" class="post-title-link" itemprop="http://yoursite.com/index.html">Computer_network</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-08 17:04:05 / Modified: 18:07:00" itemprop="dateCreated datePublished" datetime="2019-01-08T17:04:05+08:00">2019-01-08</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/08/Computer-network/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/08/Computer-network/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#背景<br>记录</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+
+     <div>
+        
+     </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/06/实现内网穿透/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -410,7 +568,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-07 11:47:41" itemprop="dateModified" datetime="2019-01-07T11:47:41+08:00">2019-01-07</time>
+                <time title="Modified: 2019-01-08 18:09:23" itemprop="dateModified" datetime="2019-01-08T18:09:23+08:00">2019-01-08</time>
               
             
           </span>
@@ -588,7 +746,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-06 14:40:20" itemprop="dateModified" datetime="2019-01-06T14:40:20+08:00">2019-01-06</time>
+                <time title="Modified: 2019-01-08 20:07:05" itemprop="dateModified" datetime="2019-01-08T20:07:05+08:00">2019-01-08</time>
               
             
           </span>
@@ -633,31 +791,16 @@
 
       
         
+          <hr>
+          <!--noindex-->
           
-            <hr>
-<p><strong>2018-12-23</strong></p>
-<ol>
-<li>更改以太网口传输速率:设备管理器-网络适配器</li>
-<li>KCP<ul>
-<li>牺牲带宽换取网络传输速率 <em>为什么这么说呢？</em> </li>
-<li>KCP没有规定下层传输协议，一般用UDP作为下层传输协议</li>
-<li>KCP提高速率的方法<ol>
-<li>RTO/Retransmission Timeout  ： <em>TCP 2xRTO，UDP 1.5xRTO</em> 。</li>
-<li>快重传机制 ：发送端发送了1,2,3,4,5几个包，然后收到远端的ACK: 1, 3, 4, 5，当收到ACK3时，   KCP知道2被跳过1次，收到ACK4时，知道2被跳过了2次，此时可以认为2号丢失，不用等超时，直接重传2号包，大大改善了丢包时的传输速度。</li>
-<li>选择重传 ：TCP丢包时会全部重传从丢的那个包开始以后的数据，KCP是选择性重传，只重传真正丢失的数据包。</li>
-<li>非延迟ACK ：TCP为了充分利用带宽，延迟发送ACK（NODELAY都没用），这样超时计算会算出较大的RTT时间，延长了丢包时的判断过程。KCP的ACK是否延迟发送可以调节。</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<hr>
-<p><strong>2018-12-26</strong></p>
-<ol>
-<li></li>
-</ol>
-
-          
+            <div class="post-button text-center">
+              <a class="btn" href="/2018/12/22/foolish-everyday/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
     </div>
@@ -930,7 +1073,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1064,7 +1207,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.1k字</span>
+  <span class="post-count">博客全站共1.6k字</span>
 </div>
 
         
