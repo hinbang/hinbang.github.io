@@ -106,15 +106,17 @@
 
   <meta name="description" content="背景 很多时候，我们都有这样的需求：需要将本地正在开发的服务暴露在公网上，也就是从外网直接访问我们本机上的服务。 正常情况下，这是办不到的，因为我们的本机并没有公网 IP，我们的本机处在内网当中。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FRP:frp实现内网穿透（转）">
+<meta property="og:title" content="FRP:frp实现内网穿透">
 <meta property="og:url" content="http://yoursite.com/2019/01/06/实现内网穿透/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
 <meta property="og:description" content="背景 很多时候，我们都有这样的需求：需要将本地正在开发的服务暴露在公网上，也就是从外网直接访问我们本机上的服务。 正常情况下，这是办不到的，因为我们的本机并没有公网 IP，我们的本机处在内网当中。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-11T09:03:33.795Z">
+<meta property="og:image" content="http://yoursite.com/img/what-is-shadowsocks.png">
+<meta property="og:updated_time" content="2019-01-12T13:10:33.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FRP:frp实现内网穿透（转）">
+<meta name="twitter:title" content="FRP:frp实现内网穿透">
 <meta name="twitter:description" content="背景 很多时候，我们都有这样的需求：需要将本地正在开发的服务暴露在公网上，也就是从外网直接访问我们本机上的服务。 正常情况下，这是办不到的，因为我们的本机并没有公网 IP，我们的本机处在内网当中。">
+<meta name="twitter:image" content="http://yoursite.com/img/what-is-shadowsocks.png">
 
 
 
@@ -131,7 +133,7 @@
   };
 </script>
 
-  <title>FRP:frp实现内网穿透（转） | cxxxxxxb</title>
+  <title>FRP:frp实现内网穿透 | cxxxxxxb</title>
   
 
 
@@ -368,7 +370,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">FRP:frp实现内网穿透（转）
+          <h1 class="post-title" itemprop="name headline">FRP:frp实现内网穿透
 
               
             
@@ -411,7 +413,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-11 17:03:33" itemprop="dateModified" datetime="2019-01-11T17:03:33+08:00">2019-01-11</time>
+                <time title="Modified: 2019-01-12 21:10:33" itemprop="dateModified" datetime="2019-01-12T21:10:33+08:00">2019-01-12</time>
               
             
           </span>
@@ -482,7 +484,22 @@
 <li>FRP 的原理挺容易理解的：公网服务器和内网客户端建立连接，外网用户先去访问公网服务器特定端口，触发公网服务器和内网的互动，并返回信息给外网用户。</li>
 </ul>
 <p><a href="https://blog.liyuans.com/archives/frp.html" target="_blank" rel="noopener">FRP实现内网穿透（全文）</a></p>
-<p>#</p>
+<h1 id="—–2019-1-15更新—–"><a href="#—–2019-1-15更新—–" class="headerlink" title="—–2019-1-15更新—–"></a>—–2019-1-15更新—–</h1><p>在proxycap+shadowsocks代理的条件下记录访问crsn.net的路由情况（失败了tracert没有成功走代理）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">traceroute to www.csdn.net (47.95.164.112), 64 hops max, 72 byte packets</span><br><span class="line">  * * *</span><br><span class="line">  222.204.63.254 (222.204.63.254)  98.454 ms  53.935 ms  30.356 ms  /江西南昌教育网</span><br><span class="line">  222.204.1.30 (222.204.1.30)  34.074 ms  7.324 ms  5.303 ms        </span><br><span class="line">  222.204.1.2 (222.204.1.2)  5.007 ms  339.325 ms  26.807 ms        </span><br><span class="line">  210.35.191.241 (210.35.191.241)  14.608 ms  5.621 ms  5.563 ms    </span><br><span class="line">  101.4.112.201 (101.4.112.201)  143.640 ms  466.237 ms  190.839 ms /北京海淀教育网</span><br><span class="line">  202.127.216.241 (202.127.216.241)  30.129 ms  36.550 ms  22.715 ms/北京市教育网</span><br><span class="line">  101.4.112.62 (101.4.112.62)  46.027 ms  37.683 ms  408.415 ms      </span><br><span class="line">  101.4.117.26 (101.4.117.26)  31.687 ms  30.050 ms  444.180 ms</span><br><span class="line">  101.4.112.42 (101.4.112.42)  134.921 ms  72.207 ms  50.545 ms</span><br><span class="line">  101.4.117.46 (101.4.117.46)  41.120 ms  48.097 ms  77.921 ms</span><br><span class="line">  101.4.118.186 (101.4.118.186)  148.492 ms  50.513 ms  61.134 ms</span><br><span class="line">  219.224.102.218 (219.224.102.218)  115.132 ms  51.761 ms  107.303 ms</span><br><span class="line">  121.0.31.145 (121.0.31.145)  101.794 ms  114.309 ms  54.867 ms    /浙江杭州阿里云</span><br><span class="line">  116.251.105.242 (116.251.105.242)  69.119 ms  38.278 ms  51.359 ms/美国阿里云</span><br><span class="line">  116.251.90.173 (116.251.90.173)  66.876 ms  99.161 ms  154.727 ms /浙江杭州阿里云</span><br><span class="line">  103.41.143.177 (103.41.143.177)  82.882 ms  66.530 ms  199.357 ms /北京市海淀区 BGP多线</span><br><span class="line">  * * *</span><br><span class="line">  47.95.164.112 (47.95.164.112)  252.869 ms  191.378 ms  251.532 ms /北京市阿里云</span><br></pre></td></tr></table></figure></p>
+<p>在无代理的条件下记录访问<a href="http://www.baidu.com的路由情况" target="_blank" rel="noopener">www.baidu.com的路由情况</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">traceroute: Warning: www.baidu.com has multiple addresses; using 61.135.169.121</span><br><span class="line">traceroute to www.a.shifen.com (61.135.169.121), 64 hops max, 72 byte packets</span><br><span class="line"> 1  * * *</span><br><span class="line"> 2  222.204.63.254 (222.204.63.254)  11.269 ms  5.191 ms  6.406 ms</span><br><span class="line"> 3  222.204.1.30 (222.204.1.30)  5.224 ms  15.029 ms  6.374 ms</span><br><span class="line"> 4  1.164.34.171.adsl-pool.jx.chinaunicom.com (171.34.164.1)  17.664 ms  40.483 ms  5.164 ms</span><br><span class="line"> 5  9.194.248.220.adsl-pool.jx.chinaunicom.com (220.248.194.9)  4.358 ms  17.265 ms  13.050 ms</span><br><span class="line"> 6  50.1.34.171.adsl-pool.jx.chinaunicom.com (171.34.1.50)  6.832 ms  30.355 ms  4.318 ms</span><br><span class="line"> 7  41.1.34.171.adsl-pool.jx.chinaunicom.com (171.34.1.41)  139.203 ms  37.348 ms  16.070 ms</span><br><span class="line"> 8  219.158.23.49 (219.158.23.49)  24.033 ms  18.189 ms  20.412 ms</span><br><span class="line"> 9  219.158.8.241 (219.158.8.241)  60.210 ms  40.459 ms  41.381 ms</span><br><span class="line">10  61.49.214.6 (61.49.214.6)  40.675 ms  47.865 ms  37.018 ms</span><br><span class="line">11  124.65.57.206 (124.65.57.206)  45.221 ms  53.251 ms  37.994 ms</span><br><span class="line">12  * 123.125.248.90 (123.125.248.90)  44.160 ms *</span><br><span class="line">13  * * *</span><br><span class="line">14  61.135.169.121 (61.135.169.121)  55.203 ms  41.107 ms  39.483 ms</span><br></pre></td></tr></table></figure></p>
+<h1 id="shadowsocks翻墙原理"><a href="#shadowsocks翻墙原理" class="headerlink" title="shadowsocks翻墙原理"></a>shadowsocks翻墙原理</h1><p>简单理解的话，shadowsocks 是将原来 ssh 创建的 Socks5 协议拆开成 server 端和 client 端，所以下面这个原理图基本上和利用 ssh tunnel 大致类似<br>1、6) 客户端发出的请求基于 Socks5 协议跟 ss-local 端进行通讯，由于这个 ss-local 一般是本机或路由器或局域网的其他机器，不经过 GFW，所以解决了上面被 GFW 通过特征分析进行干扰的问题<br>2、5) ss-local 和 ss-server 两端通过多种可选的加密方法进行通讯，经过 GFW 的时候是常规的TCP包，没有明显的特征码而且 GFW 也无法对通讯数据进行解密<br>3、4) ss-server 将收到的加密数据进行解密，还原原来的请求，再发送到用户需要访问的服务，获取响应原路返回<br><img src="/img/what-is-shadowsocks.png" alt="啊啊啊啊"></p>
+<h1 id="proxycap-shadowsocks-frp-实现远程访问内网"><a href="#proxycap-shadowsocks-frp-实现远程访问内网" class="headerlink" title="proxycap+shadowsocks+frp 实现远程访问内网"></a>proxycap+shadowsocks+frp 实现远程访问内网</h1><p><div id="flowchart-0" class="flow-chart"></div></p>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: chrome中浏览知网
+iterm1=>operation: socks5代理-127.0.0.1:1086 
+iterm2=>operation: shadowsocks加密（ss-client）
+iterm3=>operation: 内网NAT转公网：222.204:...
+iterm4=>operation: 路由：实验室-学校-省
+iterm5=>operation: 阿里云服务器解析出真正的destination-ip并转发 （ss-server）
+iterm6=>operation: 实验室内网下某台主机运行frp，触发公网服务器和内网的互动
+iterm7=>operation: 内网NAT转公网：222.204:...
+iterm8=>operation: 路由：实验室-学校-省
+e=>end: 知网服务器
+
+st->iterm1->iterm2->iterm3->iterm4->iterm5->iterm6->iterm7->iterm8->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
       
     </div>
@@ -717,7 +734,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT-穿透原理"><span class="nav-text">NAT 穿透原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FRP简介"><span class="nav-text">FRP简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FRP原理"><span class="nav-text">FRP原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#背景"><span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT-穿透原理"><span class="nav-text">NAT 穿透原理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FRP简介"><span class="nav-text">FRP简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FRP原理"><span class="nav-text">FRP原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#—–2019-1-15更新—–"><span class="nav-text">—–2019-1-15更新—–</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shadowsocks翻墙原理"><span class="nav-text">shadowsocks翻墙原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#proxycap-shadowsocks-frp-实现远程访问内网"><span class="nav-text">proxycap+shadowsocks+frp 实现远程访问内网</span></a></li></ol></div>
             
 
           </div>
@@ -765,7 +782,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.6k字</span>
+  <span class="post-count">博客全站共2.9k字</span>
 </div>
 
         
@@ -893,7 +910,7 @@
       var disqus_config = function () {
         this.page.url = "http://yoursite.com/2019/01/06/实现内网穿透/";
         this.page.identifier = "2019/01/06/实现内网穿透/";
-        this.page.title = 'FRP:frp实现内网穿透（转）';
+        this.page.title = 'FRP:frp实现内网穿透';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
