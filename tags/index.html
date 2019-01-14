@@ -412,9 +412,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-      </div>
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MjE0NS8xODY5Mg=="></div>
     </div>
 
   
@@ -592,7 +590,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.1k字</span>
+  <span class="post-count">博客全站共2.2k字</span>
 </div>
 
         
@@ -711,30 +709,23 @@
 
   
 
-  
-    <script id="dsq-count-scr" src="https://chenxuanbang.disqus.com/count.js" async></script>
-  
+
 
   
     <script>
-      var disqus_config = function () {
-        this.page.url = "http://yoursite.com/tags/index.html";
-        this.page.identifier = "tags/index.html";
-        this.page.title = 'tags';
-        };
-      function loadComments () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://chenxuanbang.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      }
-      
-        loadComments();
-      
+      window.livereOptions = {
+        refer: 'tags/index.html'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
     </script>
   
-
-
 
 
 

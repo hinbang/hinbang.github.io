@@ -109,7 +109,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/12/22/foolish-everyday/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-12T12:03:47.942Z">
+<meta property="og:updated_time" content="2019-01-14T07:53:48.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Foolish_Everyday">
 
@@ -408,7 +408,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-12 20:03:47" itemprop="dateModified" datetime="2019-01-12T20:03:47+08:00">2019-01-12</time>
+                <time title="Modified: 2019-01-14 15:53:48" itemprop="dateModified" datetime="2019-01-14T15:53:48+08:00">2019-01-14</time>
               
             
           </span>
@@ -416,17 +416,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/12/22/foolish-everyday/#comments" itemprop="discussionUrl">
-                
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/22/foolish-everyday/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -476,6 +465,10 @@
 <p>如果你要解压缩文件的话,cd到相关目录之后<br>参考<a href="https://blog.csdn.net/yishengzhiai005/article/details/53168285" target="_blank" rel="noopener">Mac terminal下解压缩命令大全</a></p>
 </li>
 <li>什么是nas，什么是群晖？<br>Nas是（Network Attached Storage网络附属存储）的简称<br>群晖作为nas，通过DiskStation Manager (DSM)是网页界面的直觉式操作系统，可帮助用户管理存于Synology DiskStation和RackStation里的文件、照片、音乐、视频以及其他重要内容。DiskStation Manager可实现的不仅是存储资料，用户还可以自行设置应用程序与选择所需要的服务。</li>
+</ol>
+<h1 id="2019-1-8-1"><a href="#2019-1-8-1" class="headerlink" title="2019-1-8"></a>2019-1-8</h1><ol>
+<li>firewalld 防火墙（CentOS 7）<br>service firewalld restart 重启<br>service firewalld start 开启<br>service firewalld stop 关闭<br>systemctl status firewall 服务状态<br>firewall-cmd –state 状态<br>firewall-cmd –list-all  查看防火墙状态<br>firewall-cmd –zone=public –add-port=80/tcp –permanent   （–permanent永久生效，没有此参数重启后失效）</li>
+<li>wpa_supplicant无线网络配置<br>[wpa_supplicant无线网络配置]<a href="https://blog.csdn.net/simeone18/article/details/8580592" target="_blank" rel="noopener">https://blog.csdn.net/simeone18/article/details/8580592</a></li>
 </ol>
 
       
@@ -554,9 +547,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-      </div>
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MjE0NS8xODY5Mg=="></div>
     </div>
 
   
@@ -711,7 +702,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-12-23"><span class="nav-text">2018-12-23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-1-8"><span class="nav-text">2019-1-8</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-12-23"><span class="nav-text">2018-12-23</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-1-8"><span class="nav-text">2019-1-8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2019-1-8-1"><span class="nav-text">2019-1-8</span></a></li></ol></div>
             
 
           </div>
@@ -759,7 +750,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.1k字</span>
+  <span class="post-count">博客全站共2.2k字</span>
 </div>
 
         
@@ -878,30 +869,23 @@
 
   
 
-  
-    <script id="dsq-count-scr" src="https://chenxuanbang.disqus.com/count.js" async></script>
-  
+
 
   
     <script>
-      var disqus_config = function () {
-        this.page.url = "http://yoursite.com/2018/12/22/foolish-everyday/";
-        this.page.identifier = "2018/12/22/foolish-everyday/";
-        this.page.title = 'Foolish_Everyday';
-        };
-      function loadComments () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://chenxuanbang.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      }
-      
-        loadComments();
-      
+      window.livereOptions = {
+        refer: '2018/12/22/foolish-everyday/'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
     </script>
   
-
-
 
 
 
