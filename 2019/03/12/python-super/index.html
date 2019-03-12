@@ -104,21 +104,24 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="子类构造函数调用super().init() 如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。 如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。 如果子类(Puple_super)继承父类(Person)做了初始化，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python-super">
+<meta property="og:url" content="http://yoursite.com/2019/03/12/python-super/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
+<meta property="og:description" content="子类构造函数调用super().init() 如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。 如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。 如果子类(Puple_super)继承父类(Person)做了初始化，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-08T10:06:58.989Z">
+<meta property="og:updated_time" content="2019-03-12T08:33:54.977Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="python-super">
+<meta name="twitter:description" content="子类构造函数调用super().init() 如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。 如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。 如果子类(Puple_super)继承父类(Person)做了初始化，">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/12/python-super/">
 
 
 
@@ -128,7 +131,7 @@
   };
 </script>
 
-  <title>categories | cxxxxxxb</title>
+  <title>python-super | cxxxxxxb</title>
   
 
 
@@ -252,7 +255,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -328,90 +331,181 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/12/python-super/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChenXuanbang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="cxxxxxxb">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">categories
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                2 categories in total
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/FPGA/">FPGA</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/FPGA/IP-Core/">IP_Core</a><span class="category-list-count">1</span></li></ul></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">python-super
+
+              
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-03-12 15:37:10 / Modified: 16:33:54" itemprop="dateCreated datePublished" datetime="2019-03-12T15:37:10+08:00">2019-03-12</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="子类构造函数调用super-init"><a href="#子类构造函数调用super-init" class="headerlink" title="子类构造函数调用super().init()"></a>子类构造函数调用super().<strong>init</strong>()</h1><ol>
+<li>如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。</li>
+<li>如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。</li>
+<li>如果子类(Puple_super)继承父类(Person)做了初始化，且调用了super初始化了父类的构造函数，那么子类(Puple_Super)也会继承父类的(name)属性。<br><code>`</code><br>class chenxuanbang():<br> self.name = ‘chenxuanbang’<br> def iamufarther(self):<pre><code>print(&apos;iamufarther&apos;)
+</code></pre></li>
+</ol>
+<p>class huangxing(chenxuanbang):<br>    pass</p>
+<p>class huangxing(chenxuanbang):<br>    def__init__(self):<br>        print(‘huangxing’)</p>
+<p>class huangxing(chenxuanbang):<br>    def__init__(self):<br>        super().<strong>init</strong>()<br><code></code>    </p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+
+     <div>
+        
+          <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------Thanks For Your Reading-------------</div>
+    
+</div>
+        
+     </div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/05/learn-to-git/" rel="next" title="learn-to-git">
+                <i class="fa fa-chevron-left"></i> learn-to-git
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -446,8 +540,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -556,6 +659,22 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#子类构造函数调用super-init"><span class="nav-text">子类构造函数调用super().init()</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -729,7 +848,7 @@
   
     <script>
       window.livereOptions = {
-        refer: 'categories/index.html'
+        refer: '2019/03/12/python-super/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
