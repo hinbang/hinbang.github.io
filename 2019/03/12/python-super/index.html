@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="cxxxxxxb">
 <meta property="og:description" content="子类构造函数调用super().init()">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-13T02:29:14.584Z">
+<meta property="og:updated_time" content="2019-03-13T03:35:11.815Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python-super">
 <meta name="twitter:description" content="子类构造函数调用super().init()">
@@ -411,7 +411,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-13 10:29:14" itemprop="dateModified" datetime="2019-03-13T10:29:14+08:00">2019-03-13</time>
+                <time title="Modified: 2019-03-13 11:35:11" itemprop="dateModified" datetime="2019-03-13T11:35:11+08:00">2019-03-13</time>
               
             
           </span>
@@ -448,13 +448,25 @@
 <ol>
 <li>如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。</li>
 <li>如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。</li>
-<li>如果子类(Puple_super)继承父类(Person)做了初始化，且调用了super初始化了父类的构造函数，那么子类(Puple_Super)也会继承父类的(name)属性。<br><code>`</code><br>class chenxuanbang():           # 定义了一个空类<br> self.name = ‘chenxuanbang’<br> def iamufarther(self):<pre><code>print(&apos;iamufarther&apos;)
-</code></pre></li>
+<li>如果子类(Puple_super)继承父类(Person)做了初始化，且调用了super初始化了父类的构造函数，那么子类(Puple_Super)也会继承父类的(name)属性。</li>
 </ol>
-<p>class huangxing(chenxuanbang):<br>    pass</p>
-<p>class huangxing(chenxuanbang):<br>    def__init__(self):<br>        print(‘huangxing’)</p>
-<p>class huangxing(chenxuanbang):<br>    def__init__(self):<br>        super().<strong>init</strong>()<br><code></code>    </p>
+<pre><code># 定义了一个空类
+class chenxuanbang():         
+    self.name = ‘chenxuanbang’
+    def iamufarther(self):
+        print(&apos;iamufarther&apos;)
 
+class huangxing(chenxuanbang):
+    pass
+
+class huangxing(chenxuanbang):
+    def__init__(self):
+        print(&apos;huangxing&apos;)
+
+class huangxing(chenxuanbang):
+    def__init__(self):
+        super().__init__()
+</code></pre>
       
     </div>
 
