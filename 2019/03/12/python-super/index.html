@@ -104,17 +104,17 @@
 
 
 
-  <meta name="description" content="子类构造函数调用super().init() 如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。 如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。 如果子类(Puple_super)继承父类(Person)做了初始化，">
+  <meta name="description" content="子类构造函数调用super().init()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python-super">
 <meta property="og:url" content="http://yoursite.com/2019/03/12/python-super/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
-<meta property="og:description" content="子类构造函数调用super().init() 如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。 如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。 如果子类(Puple_super)继承父类(Person)做了初始化，">
+<meta property="og:description" content="子类构造函数调用super().init()">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-12T08:33:54.977Z">
+<meta property="og:updated_time" content="2019-03-13T02:29:14.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python-super">
-<meta name="twitter:description" content="子类构造函数调用super().init() 如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。 如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。 如果子类(Puple_super)继承父类(Person)做了初始化，">
+<meta name="twitter:description" content="子类构造函数调用super().init()">
 
 
 
@@ -394,12 +394,24 @@
                 
               
 
-              <time title="Created: 2019-03-12 15:37:10 / Modified: 16:33:54" itemprop="dateCreated datePublished" datetime="2019-03-12T15:37:10+08:00">2019-03-12</time>
+              <time title="Created: 2019-03-12 15:37:10" itemprop="dateCreated datePublished" datetime="2019-03-12T15:37:10+08:00">2019-03-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-13 10:29:14" itemprop="dateModified" datetime="2019-03-13T10:29:14+08:00">2019-03-13</time>
               
             
           </span>
@@ -432,10 +444,11 @@
       
 
       
-        <h1 id="子类构造函数调用super-init"><a href="#子类构造函数调用super-init" class="headerlink" title="子类构造函数调用super().init()"></a>子类构造函数调用super().<strong>init</strong>()</h1><ol>
+        <h1 id="子类构造函数调用super-init"><a href="#子类构造函数调用super-init" class="headerlink" title="子类构造函数调用super().init()"></a>子类构造函数调用super().<strong>init</strong>()</h1><a id="more"></a>
+<ol>
 <li>如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。</li>
 <li>如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。</li>
-<li>如果子类(Puple_super)继承父类(Person)做了初始化，且调用了super初始化了父类的构造函数，那么子类(Puple_Super)也会继承父类的(name)属性。<br><code>`</code><br>class chenxuanbang():<br> self.name = ‘chenxuanbang’<br> def iamufarther(self):<pre><code>print(&apos;iamufarther&apos;)
+<li>如果子类(Puple_super)继承父类(Person)做了初始化，且调用了super初始化了父类的构造函数，那么子类(Puple_Super)也会继承父类的(name)属性。<br><code>`</code><br>class chenxuanbang():           # 定义了一个空类<br> self.name = ‘chenxuanbang’<br> def iamufarther(self):<pre><code>print(&apos;iamufarther&apos;)
 </code></pre></li>
 </ol>
 <p>class huangxing(chenxuanbang):<br>    pass</p>

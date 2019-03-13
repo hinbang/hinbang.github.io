@@ -393,12 +393,24 @@
                 
               
 
-              <time title="Created: 2019-03-12 15:37:10 / Modified: 16:33:54" itemprop="dateCreated datePublished" datetime="2019-03-12T15:37:10+08:00">2019-03-12</time>
+              <time title="Created: 2019-03-12 15:37:10" itemprop="dateCreated datePublished" datetime="2019-03-12T15:37:10+08:00">2019-03-12</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-13 10:29:14" itemprop="dateModified" datetime="2019-03-13T10:29:14+08:00">2019-03-13</time>
               
             
           </span>
@@ -432,18 +444,16 @@
 
       
         
+          <h1 id="子类构造函数调用super-init"><a href="#子类构造函数调用super-init" class="headerlink" title="子类构造函数调用super().init()"></a>子类构造函数调用super().<strong>init</strong>()</h1>
+          <!--noindex-->
           
-            <h1 id="子类构造函数调用super-init"><a href="#子类构造函数调用super-init" class="headerlink" title="子类构造函数调用super().init()"></a>子类构造函数调用super().<strong>init</strong>()</h1><ol>
-<li>如果子类(Puple)继承父类(Person)不做初始化，那么会自动继承父类(Person)属性name。</li>
-<li>如果子类(Puple_Init)继承父类(Person)做了初始化，且不调用super初始化父类构造函数，那么子类(Puple_Init)不会自动继承父类的属性(name)。</li>
-<li>如果子类(Puple_super)继承父类(Person)做了初始化，且调用了super初始化了父类的构造函数，那么子类(Puple_Super)也会继承父类的(name)属性。<br><code>`</code><br>class chenxuanbang():<br> self.name = ‘chenxuanbang’<br> def iamufarther(self):<pre><code>print(&apos;iamufarther&apos;)
-</code></pre></li>
-</ol>
-<p>class huangxing(chenxuanbang):<br>    pass</p>
-<p>class huangxing(chenxuanbang):<br>    def__init__(self):<br>        print(‘huangxing’)</p>
-<p>class huangxing(chenxuanbang):<br>    def__init__(self):<br>        super().<strong>init</strong>()<br><code></code>    </p>
-
-          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/12/python-super/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
     </div>
@@ -565,7 +575,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-12 15:45:45" itemprop="dateModified" datetime="2019-03-12T15:45:45+08:00">2019-03-12</time>
+                <time title="Modified: 2019-03-13 10:29:24" itemprop="dateModified" datetime="2019-03-13T10:29:24+08:00">2019-03-13</time>
               
             
           </span>
@@ -599,18 +609,16 @@
 
       
         
+          <h1 id="git操作"><a href="#git操作" class="headerlink" title="git操作"></a>git操作</h1>
+          <!--noindex-->
           
-            <h1 id="git操作"><a href="#git操作" class="headerlink" title="git操作"></a>git操作</h1><p><img src="/img/git.jpg" alt="git操作原理"></p>
-<h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p>远程操作的第一步，通常是从远程主机克隆一个版本库，这时就要用到<code>git clone</code>命令。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;版本库的网址&gt;</span><br></pre></td></tr></table></figure></p>
-<p>该命令会在本地主机生成一个目录，与远程主机的版本库同名。如果要指定不同的目录名，可以将目录名作为<code>git clone</code>命令的第二个参数。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;版本库的网址&gt; &lt;本地目录名&gt;</span><br></pre></td></tr></table></figure></p>
-<p><code>git clone</code>支持多种协议，除了HTTP(s)以外，还支持SSH、Git、本地文件协议等<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git clone http[s]://example.com/path/to/repo.git/</span><br><span class="line">git clone ssh://example.com/path/to/repo.git/</span><br><span class="line">git clone git://example.com/path/to/repo.git/</span><br><span class="line">git clone /opt/git/project.git </span><br><span class="line">git clone file:///opt/git/project.git</span><br><span class="line">git clone ftp[s]://example.com/path/to/repo.git/</span><br><span class="line">git clone rsync://example.com/path/to/repo.git/</span><br></pre></td></tr></table></figure></p>
-<h2 id="git-remote"><a href="#git-remote" class="headerlink" title="git remote"></a>git remote</h2><p>为了便于管理，Git要求每个远程主机都必须指定一个主机名。<code>git remote</code>命令就用于管理主机名。<br>不带选项的时候，<code>git remote</code>命令列出所有远程主机<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote</span><br><span class="line">origin</span><br></pre></td></tr></table></figure></p>
-<h1 id="——update-2019-3-12——"><a href="#——update-2019-3-12——" class="headerlink" title="——update 2019-3-12——"></a>——update 2019-3-12——</h1><ul>
-<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰git教程</a></li>
-<li>多人协作避免冲突 先commit-再pull-再push</li>
-</ul>
-
-          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/03/05/learn-to-git/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
     </div>
