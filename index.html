@@ -1029,7 +1029,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-20 14:54:14" itemprop="dateModified" datetime="2019-03-20T14:54:14+08:00">2019-03-20</time>
+                <time title="Modified: 2019-03-20 14:57:51" itemprop="dateModified" datetime="2019-03-20T14:57:51+08:00">2019-03-20</time>
               
             
           </span>
@@ -1063,37 +1063,19 @@
 
       
         
+          <p>Record of NI5772 AND AT1212 Confirguration<br>
+          <!--noindex-->
           
-            <h2 id="Record-of-NI5772-AND-AT1212-Confirguration"><a href="#Record-of-NI5772-AND-AT1212-Confirguration" class="headerlink" title="Record of NI5772 AND AT1212 Confirguration"></a>Record of NI5772 AND AT1212 Confirguration</h2><h2 id="NI5772"><a href="#NI5772" class="headerlink" title="NI5772"></a>NI5772</h2><ol>
-<li>Launch LabVIEW.</li>
-<li>Click Help黄ind Examples to launch the NI Example Finder.</li>
-<li>In the NI Example Finder window, select Hardware Input and Output黄lexRIO簧O Modules晃I 5772(DC).</li>
-<li>Select NI 5772(DC) - Getting Started.lvproj.</li>
-<li>In the Project Explorer window, open NI 5772 - Getting Started PXIe (Host).vi under My Computer to open the host VI.</li>
-<li><p>Because this VI uses the NI PXI-7956R as the FPGA target by default,We change the FPGA target by following steps<br>a) Select Window挥how Block Diagram to open the VI block diagram.<br>b) On the block diagram, right-click the Open FPGA VI Reference (PXI-7952R) function and select Configure Open FPGA VI Reference.</p>
-<p>c1) Then choose vi file adapt to your FPGA type.If it is the first time to run this example .vi,you should recompile the vi file.</p>
-<ul>
-<li>Back to the Project Explorer ,click PXIe-7975R(RIO0)宦uild Specifications灰ight click NI 5772(DC)-Getting Started PXIe(FPGA)</li>
-<li>Select ‘use the local compile server’.Before this you should download a compile tools.We choose <a href="http://download.ni.com/support/softlib/labview/labview_fpga/fpga_module/2016/Windows%20Tools/2016Xilinx2015_4.iso" target="_blank" rel="noopener">2016Xilinx2015_4</a></li>
-<li>Compilation finished<br>c2) Choose the bitfiles for configuration (this way remain errors)</li>
-<li>It show ‘FAM initialization failed’ when we run </li>
-</ul>
-</li>
-<li>In the front panel,select your FPGA target type in RIO Device and run</li>
-</ol>
-<hr>
-<h2 id="AT1212"><a href="#AT1212" class="headerlink" title="AT1212"></a>AT1212</h2><h3 id="pre-build"><a href="#pre-build" class="headerlink" title="pre-build"></a>pre-build</h3><p>Download <a href="https://www.activetechnologies.it/awg-1212-software/" target="_blank" rel="noopener">AT1212 software</a><br>You must copy the following files (tbc,xml and vhdl) in the FlexRIO working paths<br>a. Open the installation folder \XML_VHDL<br>b. Copy the \XML_VHDL\AT 1120 and \XML_VHDL\AT 1212 folders into the following paths:<br>64-Bit Paths<br>C:\Program Files (x86)\National Instruments\Shared\FlexRIO\IO Modules\AT 1120<br>C:\Program Files (x86)\National Instruments\Shared\FlexRIO\IO Modules\AT 1212<br>32-Bit Paths<br>C:\Program Files \National Instruments\Shared\FlexRIO\IO Modules\AT 1120<br>C:\Program Files \National Instruments\Shared\FlexRIO\IO Modules\AT 1212</p>
-<p>###</p>
-<ol>
-<li>Select and open AT1120_1212_SignalGenerator.lvproj LabView project.</li>
-<li>In the Project Explorer window, open DACModuleControl (Host).exe under My Computer.It appears some difference with the introduction of official.There is no need to change the FPGA target as we used,where cost us lots of time to find configuration access</li>
-<li>In the DACModuleControl(Host).vi(DACModuleControl(Host).exe) panel,we must select the ADAPTER NAME rightly(1212-2CHs), enter Resource name (RIO1), which is the RIO FPGA Card(Name can be fond in NI MAX)</li>
-</ol>
-
-          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/01/21/NI-PXIe-Project/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
 
@@ -1988,7 +1970,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.8k字</span>
+  <span class="post-count">博客全站共2.9k字</span>
 </div>
 
         
