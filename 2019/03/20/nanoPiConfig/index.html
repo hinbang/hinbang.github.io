@@ -104,24 +104,24 @@
 
 
 
-  <meta name="description" content="知乎：什么是IQ调制？">
+  <meta name="description" content="nano pi configure*">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QAM">
-<meta property="og:url" content="http://yoursite.com/2019/02/20/QAM/index.html">
+<meta property="og:title" content="nanoPiConfig">
+<meta property="og:url" content="http://yoursite.com/2019/03/20/nanoPiConfig/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
-<meta property="og:description" content="知乎：什么是IQ调制？">
+<meta property="og:description" content="nano pi configure*">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-20T07:10:45.913Z">
+<meta property="og:updated_time" content="2019-03-20T07:01:07.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QAM">
-<meta name="twitter:description" content="知乎：什么是IQ调制？">
+<meta name="twitter:title" content="nanoPiConfig">
+<meta name="twitter:description" content="nano pi configure*">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/20/QAM/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/20/nanoPiConfig/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>QAM | cxxxxxxb</title>
+  <title>nanoPiConfig | cxxxxxxb</title>
   
 
 
@@ -351,7 +351,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/20/QAM/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/20/nanoPiConfig/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChenXuanbang">
@@ -368,7 +368,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">QAM
+          <h1 class="post-title" itemprop="name headline">nanoPiConfig
 
               
             
@@ -394,7 +394,7 @@
                 
               
 
-              <time title="Created: 2019-02-20 15:07:55 / Modified: 15:10:45" itemprop="dateCreated datePublished" datetime="2019-02-20T15:07:55+08:00">2019-02-20</time>
+              <time title="Created: 2019-03-20 15:00:18 / Modified: 15:01:07" itemprop="dateCreated datePublished" datetime="2019-03-20T15:00:18+08:00">2019-03-20</time>
             
 
             
@@ -432,7 +432,37 @@
       
 
       
-        <p><a href="https://www.zhihu.com/question/23107539" target="_blank" rel="noopener">知乎：什么是IQ调制？</a></p>
+        <p>nano pi configure*<br><a id="more"></a></p>
+<h2 id="更换root权限"><a href="#更换root权限" class="headerlink" title="更换root权限"></a>更换root权限</h2><p>teminal中输入<code>su</code>或添加sudo用户</p>
+<h2 id="换国内源"><a href="#换国内源" class="headerlink" title="换国内源"></a>换国内源</h2><ol>
+<li><p>备份source</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在su用户下打开 pluma，编辑<code>/etc/apt/sources.list</code>文件，添加以下部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial main multiverse restricted universe</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-security main multiverse restricted universe</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-updates main multiverse restricted universe</span><br><span class="line">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-backports main multiverse restricted universe</span><br><span class="line">deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial main multiverse restricted universe</span><br><span class="line">deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-security main multiverse restricted universe</span><br><span class="line">deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-updates main multiverse restricted universe</span><br><span class="line">deb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ xenial-backports main multiverse restricted universe</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>（remark: ubuntu 15.04配置 xenial版本源也可正常使用）<br>——-update in 2019 03 17——–<br>不同版本的源好像并不能使用，至少今天我们碰到了很多难以解决的问题（kill me）<br>ubuntu 15.04 vivid 版本源是否停止更新有待考究<br>但至少用国内的old-release源可以成功安装pyqt5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid main multiverse restricted universe</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-backports main multiverse restricted universe</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-proposed main multiverse restricted universe</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-security main multiverse restricted universe</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-updates main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-backports main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-proposed main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-security main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-updates main multiverse restricted universe</span><br></pre></td></tr></table></figure></p>
+<ol start="3">
+<li>更新源<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="设置无密码登录"><a href="#设置无密码登录" class="headerlink" title="设置无密码登录"></a>设置无密码登录</h2><ol>
+<li><p>打开文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/share/lightdm/lightdm.conf.d/60-lightdm-gtk-greeter.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加自动登录命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">autologin-user=yourusername</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="设置不休眠"><a href="#设置不休眠" class="headerlink" title="设置不休眠"></a>设置不休眠</h2><p>system&gt;perference&gt;screensave&gt;</p>
+<ol>
+<li>关闭screensave active</li>
+<li>powermanagerment&gt;None</li>
+</ol>
 
       
     </div>
@@ -474,8 +504,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/21/机器学习/" rel="next" title="机器学习">
-                <i class="fa fa-chevron-left"></i> 机器学习
+              <a href="/2019/03/12/python-super/" rel="next" title="Python-Super">
+                <i class="fa fa-chevron-left"></i> Python-Super
               </a>
             
           </div>
@@ -483,10 +513,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/05/learn-to-git/" rel="prev" title="learn-to-git">
-                learn-to-git <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -536,8 +562,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -646,6 +681,22 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#更换root权限"><span class="nav-text">更换root权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#换国内源"><span class="nav-text">换国内源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置无密码登录"><span class="nav-text">设置无密码登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置不休眠"><span class="nav-text">设置不休眠</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -819,7 +870,7 @@
   
     <script>
       window.livereOptions = {
-        refer: '2019/02/20/QAM/'
+        refer: '2019/03/20/nanoPiConfig/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
