@@ -410,7 +410,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-13 11:36:54" itemprop="dateModified" datetime="2019-03-13T11:36:54+08:00">2019-03-13</time>
+                <time title="Modified: 2019-03-20 14:54:55" itemprop="dateModified" datetime="2019-03-20T14:54:55+08:00">2019-03-20</time>
               
             
           </span>
@@ -444,7 +444,7 @@
 
       
         
-          <h1 id="子类构造函数调用super-init"><a href="#子类构造函数调用super-init" class="headerlink" title="子类构造函数调用super().init()"></a>子类构造函数调用super().<strong>init</strong>()</h1>
+          <p>子类构造函数调用super().<strong>init</strong>()<br>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -456,7 +456,7 @@
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
 
@@ -575,7 +575,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-13 10:29:24" itemprop="dateModified" datetime="2019-03-13T10:29:24+08:00">2019-03-13</time>
+                <time title="Modified: 2019-03-20 14:55:01" itemprop="dateModified" datetime="2019-03-20T14:55:01+08:00">2019-03-20</time>
               
             
           </span>
@@ -609,7 +609,7 @@
 
       
         
-          <h1 id="git操作"><a href="#git操作" class="headerlink" title="git操作"></a>git操作</h1>
+          <p>git操作<br>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -621,7 +621,7 @@
           <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
 
@@ -1012,12 +1012,24 @@
                 
               
 
-              <time title="Created: 2019-01-21 13:16:11 / Modified: 13:59:38" itemprop="dateCreated datePublished" datetime="2019-01-21T13:16:11+08:00">2019-01-21</time>
+              <time title="Created: 2019-01-21 13:16:11" itemprop="dateCreated datePublished" datetime="2019-01-21T13:16:11+08:00">2019-01-21</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-20 14:54:14" itemprop="dateModified" datetime="2019-03-20T14:54:14+08:00">2019-03-20</time>
               
             
           </span>
@@ -1052,7 +1064,31 @@
       
         
           
-            <p>写好了下次记得更新</p>
+            <h2 id="Record-of-NI5772-AND-AT1212-Confirguration"><a href="#Record-of-NI5772-AND-AT1212-Confirguration" class="headerlink" title="Record of NI5772 AND AT1212 Confirguration"></a>Record of NI5772 AND AT1212 Confirguration</h2><h2 id="NI5772"><a href="#NI5772" class="headerlink" title="NI5772"></a>NI5772</h2><ol>
+<li>Launch LabVIEW.</li>
+<li>Click Help黄ind Examples to launch the NI Example Finder.</li>
+<li>In the NI Example Finder window, select Hardware Input and Output黄lexRIO簧O Modules晃I 5772(DC).</li>
+<li>Select NI 5772(DC) - Getting Started.lvproj.</li>
+<li>In the Project Explorer window, open NI 5772 - Getting Started PXIe (Host).vi under My Computer to open the host VI.</li>
+<li><p>Because this VI uses the NI PXI-7956R as the FPGA target by default,We change the FPGA target by following steps<br>a) Select Window挥how Block Diagram to open the VI block diagram.<br>b) On the block diagram, right-click the Open FPGA VI Reference (PXI-7952R) function and select Configure Open FPGA VI Reference.</p>
+<p>c1) Then choose vi file adapt to your FPGA type.If it is the first time to run this example .vi,you should recompile the vi file.</p>
+<ul>
+<li>Back to the Project Explorer ,click PXIe-7975R(RIO0)宦uild Specifications灰ight click NI 5772(DC)-Getting Started PXIe(FPGA)</li>
+<li>Select ‘use the local compile server’.Before this you should download a compile tools.We choose <a href="http://download.ni.com/support/softlib/labview/labview_fpga/fpga_module/2016/Windows%20Tools/2016Xilinx2015_4.iso" target="_blank" rel="noopener">2016Xilinx2015_4</a></li>
+<li>Compilation finished<br>c2) Choose the bitfiles for configuration (this way remain errors)</li>
+<li>It show ‘FAM initialization failed’ when we run </li>
+</ul>
+</li>
+<li>In the front panel,select your FPGA target type in RIO Device and run</li>
+</ol>
+<hr>
+<h2 id="AT1212"><a href="#AT1212" class="headerlink" title="AT1212"></a>AT1212</h2><h3 id="pre-build"><a href="#pre-build" class="headerlink" title="pre-build"></a>pre-build</h3><p>Download <a href="https://www.activetechnologies.it/awg-1212-software/" target="_blank" rel="noopener">AT1212 software</a><br>You must copy the following files (tbc,xml and vhdl) in the FlexRIO working paths<br>a. Open the installation folder \XML_VHDL<br>b. Copy the \XML_VHDL\AT 1120 and \XML_VHDL\AT 1212 folders into the following paths:<br>64-Bit Paths<br>C:\Program Files (x86)\National Instruments\Shared\FlexRIO\IO Modules\AT 1120<br>C:\Program Files (x86)\National Instruments\Shared\FlexRIO\IO Modules\AT 1212<br>32-Bit Paths<br>C:\Program Files \National Instruments\Shared\FlexRIO\IO Modules\AT 1120<br>C:\Program Files \National Instruments\Shared\FlexRIO\IO Modules\AT 1212</p>
+<p>###</p>
+<ol>
+<li>Select and open AT1120_1212_SignalGenerator.lvproj LabView project.</li>
+<li>In the Project Explorer window, open DACModuleControl (Host).exe under My Computer.It appears some difference with the introduction of official.There is no need to change the FPGA target as we used,where cost us lots of time to find configuration access</li>
+<li>In the DACModuleControl(Host).vi(DACModuleControl(Host).exe) panel,we must select the ADAPTER NAME rightly(1212-2CHs), enter Resource name (RIO1), which is the RIO FPGA Card(Name can be fond in NI MAX)</li>
+</ol>
 
           
         
@@ -1506,7 +1542,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-15 12:17:14" itemprop="dateModified" datetime="2019-03-15T12:17:14+08:00">2019-03-15</time>
+                <time title="Modified: 2019-03-19 14:38:06" itemprop="dateModified" datetime="2019-03-19T14:38:06+08:00">2019-03-19</time>
               
             
           </span>
@@ -1952,7 +1988,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共2.3k字</span>
+  <span class="post-count">博客全站共2.8k字</span>
 </div>
 
         
