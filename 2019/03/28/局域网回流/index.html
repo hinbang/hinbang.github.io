@@ -104,24 +104,24 @@
 
 
 
-  <meta name="description" content="知乎：什么是IQ调制？">
+  <meta name="description" content="路由器映射后公网能正常访问但局域网无法通过公网IP访问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QAM">
-<meta property="og:url" content="http://chenxuanbang.cn/2019/02/20/QAM/index.html">
+<meta property="og:title" content="路由器映射后公网能正常访问但局域网无法通过公网IP访问">
+<meta property="og:url" content="http://chenxuanbang.cn/2019/03/28/局域网回流/index.html">
 <meta property="og:site_name" content="cxxxxxxb">
-<meta property="og:description" content="知乎：什么是IQ调制？">
+<meta property="og:description" content="路由器映射后公网能正常访问但局域网无法通过公网IP访问">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-20T07:10:45.913Z">
+<meta property="og:updated_time" content="2019-03-28T06:15:12.594Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QAM">
-<meta name="twitter:description" content="知乎：什么是IQ调制？">
+<meta name="twitter:title" content="路由器映射后公网能正常访问但局域网无法通过公网IP访问">
+<meta name="twitter:description" content="路由器映射后公网能正常访问但局域网无法通过公网IP访问">
 
 
 
 
 
 
-  <link rel="canonical" href="http://chenxuanbang.cn/2019/02/20/QAM/">
+  <link rel="canonical" href="http://chenxuanbang.cn/2019/03/28/局域网回流/">
 
 
 
@@ -131,7 +131,7 @@
   };
 </script>
 
-  <title>QAM | cxxxxxxb</title>
+  <title>路由器映射后公网能正常访问但局域网无法通过公网IP访问 | cxxxxxxb</title>
   
 
 
@@ -351,7 +351,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chenxuanbang.cn/2019/02/20/QAM/">
+    <link itemprop="mainEntityOfPage" href="http://chenxuanbang.cn/2019/03/28/局域网回流/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChenXuanbang">
@@ -368,7 +368,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">QAM
+          <h1 class="post-title" itemprop="name headline">路由器映射后公网能正常访问但局域网无法通过公网IP访问
 
               
             
@@ -394,7 +394,7 @@
                 
               
 
-              <time title="Created: 2019-02-20 15:07:55 / Modified: 15:10:45" itemprop="dateCreated datePublished" datetime="2019-02-20T15:07:55+08:00">2019-02-20</time>
+              <time title="Created: 2019-03-28 14:10:54 / Modified: 14:15:12" itemprop="dateCreated datePublished" datetime="2019-03-28T14:10:54+08:00">2019-03-28</time>
             
 
             
@@ -432,7 +432,10 @@
       
 
       
-        <p><a href="https://www.zhihu.com/question/23107539" target="_blank" rel="noopener">知乎：什么是IQ调制？</a></p>
+        <p>路由器映射后公网能正常访问但局域网无法通过公网IP访问<br><a id="more"></a><br>前段时间在公司的路由器上配置把公网IP映射到局域网中的一台电脑，映射为web服务器，在公司外面可以使用公网IP正常访问web服务，但公司内部使用公网IP确无法访问web服务。最开始以为是路由器配置问题，多次排查配置，没有发现问题；然后想到会不会是本机路由表的问题，尝试设置一些静态路由，问题依然没有解决；最后终于在网上找到类似的问题，原因是路由器硬件的问题，路由器不支持数据回流造成。</p>
+<h1 id="回流是什么？"><a href="#回流是什么？" class="headerlink" title="回流是什么？"></a>回流是什么？</h1><p>最简单的一个实例：<br>网吧内网一台主机192.168.0.2建了个WEB服务站点端口80，然后在网关(其内网地址是192.168.0.1、公网地址为218.4.218.4)上映射80端口到192.168.0.2的80端口，这样INTERNET上就能以<a href="http://218.4.218.4:80的地址访问到192.168.0.2的WEB站点了。然后出现了个问题，在同网吧的另一台电脑192.168.0.3上，键入http://218.4.218.4:80，却无法访问该WEB站点。就这个现象，我们就称之为“不支持回流”了，这里指的是网关上的映射方式不支持回流，所以说“回流”一说，是针对映射方式而言的。" target="_blank" rel="noopener">http://218.4.218.4:80的地址访问到192.168.0.2的WEB站点了。然后出现了个问题，在同网吧的另一台电脑192.168.0.3上，键入http://218.4.218.4:80，却无法访问该WEB站点。就这个现象，我们就称之为“不支持回流”了，这里指的是网关上的映射方式不支持回流，所以说“回流”一说，是针对映射方式而言的。</a></p>
+<h1 id="为什么会发生这种情况？"><a href="#为什么会发生这种情况？" class="headerlink" title="为什么会发生这种情况？"></a>为什么会发生这种情况？</h1><p>过程如下：<br>192.168.0.3要请求访问218.4.218.4的80端口，根据它掌握的路由表，它本身是不知道电脑218.4.218.4在哪里的，所以把将这个数据包发送给它的默认路由，即电脑192.168.0.1。注意：这个数据包的源地址是192.168.0.3、源端口假设是1025、目标地址是218.4.218.4、目标端口是80、SYN标志位为1、这是建立TCP连接的第一次握手。如果“把目标地址为218.4.218.4的数据包发给了192.168.0.1”你听起来觉得有点矛盾，那么我解释一下：其实这个数据包的目标IP地址是218.4.218.4，目标MAC地址却是192.168.0.1的电脑192.168.0.1接收到了这份数据包(因为它的身份是路由器，所以允许接收和转发目标地址不是自已、MAC地址却是自已接口 MAC地址的数据包)，它分析这个数据包的目标地址，发现这个数据包是需要中转到电脑192.168.0.2:80去的，于是它把这个数据包转发给了电脑 192.168.0.2:80。注意：这个数据包的源地址是192.168.0.3、源端口是1025、目标地址为192.168.0.2、目标端口为80、SYN标志位为1。我们要注意这个数据包在转发后发生了变化了，即目标地址变了。电脑192.168.0.2顺利接到了数据包，它马上作出回应，发送一个数据包给电脑192.168.0.3。注意：这个数据包的源地址是192.168.0.2、源端口是80、目标地址192.168.0.3、目标端口为1025、SYN标志位为1、ACK标志位为1、这是建立TCP连接的第二次握手。电脑192.168.0.3顺利接到了数据包，然而它发现这是一个来自192.168.0.2:80的回应，因为ACK标志位值为1摆在那里呢。它想不起来什么时候给192.168.0.2:80这个目标对象发送过SYN请求，它认为这是一个错误的数据包，于是决定把这个数据包丢弃。然后继续等待 218.4.218.4:80的回应，一直等到超时。而电脑192.168.0.2这边，它等192.168.0.3:1025的第三次握手请求包发送过来，以便建立一个TCP的连接。同样也没有结果，一直等到超时。三次握手在规定的时间内没有完成，访问宣布流产了。</p>
+<h1 id="怎样形成“回流”呢？"><a href="#怎样形成“回流”呢？" class="headerlink" title="怎样形成“回流”呢？"></a>怎样形成“回流”呢？</h1><p>玄机在于电脑192.168.0.1把第一次握手的那个数据包在转发时，不仅要修改目标地址和端口，也要修改源地址和端口，我们来看一下情况会有什么不同：电脑192.168.0.1接收到了这份数据包(因为它的身份是路由器，所以允许接收和转发目标IP地址不是自已、MAC地址却是自已接口MAC地址的数据包)，它分析这个数据包的目标地址，发现这个数据包是需要中转到电脑192.168.0.2:80去的，于是它把这个数据包通过自已的5201端口转发给了电脑192.168.0.2:80，并在内存里面记录下来了，192.168.0.1:5201已定位给了192.168.0.3:1025。注意：这个数据包的源地址是192.168.0.1、源端口是5201、目标地址为192.168.0.2、目标端口为80、SYN标志位为1。电脑192.168.0.2顺利接到了数据包，它马上作出回应，发送一个数据包给电脑192.168.0.1。注意：这个数据包的源地址是192.168.0.2、源端口是80、目标地址192.168.0.1、目标端口为5201、SYN标志位为1、ACK标志位为1、这是建立TCP连接的第二次握手。电脑192.168.0.1顺利接到了数据包，检查内存记录发现，这个数据包真正的收货人是192.168.0.3:1025，于是它把这个数据包转发给192.168.0.3。注意：这个数据包的的源地址是218.4.218.4、源端口为80、目标地址为192.168.0.3、目标端口为1025。我们要注意这个数据包在转发后发生变化了，即源地址变了。这很重要！为什么会变，因为在它心目当中，192.168.0.2:80早已定位给了218.4.218.4:80，映射规则使然。电脑192.168.0.3顺利接到了数据包，发现期待已久的218.4.218.4:80终于有了回音，它兴奋不已的发出第三次的握手请求。注意：这个数据包的源地址是192.168.0.3、源端口是1025、目标地址是218.4.218.4、目标端口是80、ACK标志位为1、这是建立TCP连接的第三次握手。跟前面的数据包一样，这个数据包会从192.168.0.1那里中转给192.168.0.2以后192.168.0.2:80和192.168.0.3:1025之间来往通信的数据包，全部由192.168.0.1负责中转，“回流”构成了</p>
 
       
     </div>
@@ -474,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/21/机器学习/" rel="next" title="机器学习">
-                <i class="fa fa-chevron-left"></i> 机器学习
+              <a href="/2019/03/20/nanoPiConfig/" rel="next" title="nanoPiConfig">
+                <i class="fa fa-chevron-left"></i> nanoPiConfig
               </a>
             
           </div>
@@ -484,8 +487,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/05/learn-to-git/" rel="prev" title="learn-to-git">
-                learn-to-git <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/09/cordic-algorithm/" rel="prev" title="基于FPGA的CORDIC算法实现">
+                基于FPGA的CORDIC算法实现 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -536,8 +539,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -646,6 +658,22 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#回流是什么？"><span class="nav-text">回流是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么会发生这种情况？"><span class="nav-text">为什么会发生这种情况？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#怎样形成“回流”呢？"><span class="nav-text">怎样形成“回流”呢？</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -819,7 +847,7 @@
   
     <script>
       window.livereOptions = {
-        refer: '2019/02/20/QAM/'
+        refer: '2019/03/28/局域网回流/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
