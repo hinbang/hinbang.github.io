@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="cxxxxxxb">
 <meta property="og:description" content="nano pi configure">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-23T07:37:31.669Z">
+<meta property="og:updated_time" content="2019-06-09T14:12:00.139Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nanoPiConfig">
 <meta name="twitter:description" content="nano pi configure">
@@ -411,7 +411,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-23 15:37:31" itemprop="dateModified" datetime="2019-03-23T15:37:31+08:00">2019-03-23</time>
+                <time title="Modified: 2019-06-09 22:12:00" itemprop="dateModified" datetime="2019-06-09T22:12:00+08:00">2019-06-09</time>
               
             
           </span>
@@ -455,10 +455,8 @@
 </li>
 </ol>
 <p>（remark: ubuntu 15.04配置 xenial版本源也可正常使用）<br>——-update in 2019 03 17——–<br>不同版本的源好像并不能使用，至少今天我们碰到了很多难以解决的问题（kill me）<br>ubuntu 15.04 vivid 版本源是否停止更新有待考究<br>但至少用国内的old-release源可以成功安装pyqt5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid main multiverse restricted universe</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-backports main multiverse restricted universe</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-proposed main multiverse restricted universe</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-security main multiverse restricted universe</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-updates main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-backports main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-proposed main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-security main multiverse restricted universe</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ vivid-updates main multiverse restricted universe</span><br></pre></td></tr></table></figure></p>
-<ol start="3">
-<li>更新源<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<p>update — 20190609<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.ustc.edu.cn/ubuntu-old-releases/ubuntu/ utopic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade</span><br></pre></td></tr></table></figure>
 <h2 id="设置无密码登录"><a href="#设置无密码登录" class="headerlink" title="设置无密码登录"></a>设置无密码登录</h2><ol>
 <li><p>打开文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /usr/share/lightdm/lightdm.conf.d/60-lightdm-gtk-greeter.conf</span><br></pre></td></tr></table></figure>
@@ -762,7 +760,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.7k字</span>
+  <span class="post-count">博客全站共5.8k字</span>
 </div>
 
         
