@@ -113,7 +113,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://chenxuanbang.cn/img/aa/git.jpg">
 <meta property="og:image" content="http://chenxuanbang.cn/img/git_command.png">
-<meta property="og:updated_time" content="2019-06-13T08:25:42.550Z">
+<meta property="og:updated_time" content="2019-06-13T14:06:48.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="learn-to-git">
 <meta name="twitter:description" content="git操作">
@@ -414,7 +414,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-06-13 16:25:42" itemprop="dateModified" datetime="2019-06-13T16:25:42+08:00">2019-06-13</time>
+                <time title="Modified: 2019-06-13 22:06:48" itemprop="dateModified" datetime="2019-06-13T22:06:48+08:00">2019-06-13</time>
               
             
           </span>
@@ -464,6 +464,19 @@
 <li>本地库的所有内容推送到远程库 <code>git push -u origin master</code></li>
 </ol>
 <h1 id="git-pull-VS-git-fetch-amp-git-merge"><a href="#git-pull-VS-git-fetch-amp-git-merge" class="headerlink" title="git pull VS git fetch&amp;git merge"></a>git pull VS git fetch&amp;git merge</h1><p><img src="/img/git_command.png" alt="git data transport command"><br>我们知道，git其实有好几个区，工作区（workspace）、暂存区（index）、本地仓库（local repository），当然还有远程仓库（remote repository）。远程仓库为我们保存一份代码拷贝，如github，而工作区、暂存区和本地仓库都在本地，这就是为什么没有网络我们也照样使用git提交（commit）代码更新，因为提交仅是提交到本地仓库，待有网络之后可以再推送（push）到远程仓库。<br>git fetch是将远程仓库的更新获取到本地仓库，不影响其他区域。而git pull则是一次性将远程仓库的代码更新到工作区（同时也会更新本地仓库）。</p>
+<h1 id="子模块操作"><a href="#子模块操作" class="headerlink" title="子模块操作"></a>子模块操作</h1><p>git submodule add <a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></p>
+<p>本地修改子项目，更新远程项目和子项目<br>应先进入子项目目录 更新子项目commit-&gt;push<br>再回到父目录进行整个项目commit-&gt;push</p>
+<p>子模块远程仓库更新后，更新本地子模块及远程项目<br>先在进入子项目目录<br>在子项目中pull<br>回到父目录commit-&gt;push<br>或者直接在父目录中<br>git submodule foreach git pull</p>
+<p>clone submodule<br>git clone  YOURURL  –recursive</p>
+<p>git clone<br>git submodule init<br>git submodule update</p>
+<h1 id="冲突解决"><a href="#冲突解决" class="headerlink" title="冲突解决"></a>冲突解决</h1><ol>
+<li><p>保留本地修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git merge --abort</span><br><span class="line">git reset --merge</span><br><span class="line">git pull  #合并后提交这个本地的合并,然后获取线上仓库</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>抛弃本地的修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master</span><br><span class="line">git fetch</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -696,7 +709,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone"><span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-remote"><span class="nav-text">git remote</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#——update-2019-3-12——"><span class="nav-text">——update 2019-3-12——</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-pull-VS-git-fetch-amp-git-merge"><span class="nav-text">git pull VS git fetch&amp;git merge</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone"><span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-remote"><span class="nav-text">git remote</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#——update-2019-3-12——"><span class="nav-text">——update 2019-3-12——</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-pull-VS-git-fetch-amp-git-merge"><span class="nav-text">git pull VS git fetch&amp;git merge</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#子模块操作"><span class="nav-text">子模块操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#冲突解决"><span class="nav-text">冲突解决</span></a></li></div>
             
 
           </div>
@@ -751,7 +764,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.1k字</span>
+  <span class="post-count">博客全站共6.3k字</span>
 </div>
 
         
