@@ -112,7 +112,8 @@
 <meta property="og:description" content="git操作">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://chenxuanbang.cn/img/aa/git.jpg">
-<meta property="og:updated_time" content="2019-04-03T07:50:39.017Z">
+<meta property="og:image" content="http://chenxuanbang.cn/img/git_command.png">
+<meta property="og:updated_time" content="2019-06-13T08:25:42.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="learn-to-git">
 <meta name="twitter:description" content="git操作">
@@ -413,7 +414,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-04-03 15:50:39" itemprop="dateModified" datetime="2019-04-03T15:50:39+08:00">2019-04-03</time>
+                <time title="Modified: 2019-06-13 16:25:42" itemprop="dateModified" datetime="2019-06-13T16:25:42+08:00">2019-06-13</time>
               
             
           </span>
@@ -455,12 +456,14 @@
 <li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰git教程</a></li>
 <li>多人协作避免冲突 先commit-再pull-再push</li>
 </ul>
+<p>首次创建/关联项目</p>
 <ol>
 <li>通过git init命令把这个目录变成Git可以管理的仓库</li>
 <li>本地关联远程库，<code>git remote add origin git@github.com:xxx</code></li>
 <li>用命令git add告诉Git，把文件添加到仓库</li>
 <li>本地库的所有内容推送到远程库 <code>git push -u origin master</code></li>
 </ol>
+<h1 id="git-pull-VS-git-fetch-amp-git-merge"><a href="#git-pull-VS-git-fetch-amp-git-merge" class="headerlink" title="git pull VS git fetch&amp;git merge"></a>git pull VS git fetch&amp;git merge</h1><p><img src="/img/git_command.png" alt="git data transport command"><br>我们知道，git其实有好几个区，工作区（workspace）、暂存区（index）、本地仓库（local repository），当然还有远程仓库（remote repository）。远程仓库为我们保存一份代码拷贝，如github，而工作区、暂存区和本地仓库都在本地，这就是为什么没有网络我们也照样使用git提交（commit）代码更新，因为提交仅是提交到本地仓库，待有网络之后可以再推送（push）到远程仓库。<br>git fetch是将远程仓库的更新获取到本地仓库，不影响其他区域。而git pull则是一次性将远程仓库的代码更新到工作区（同时也会更新本地仓库）。</p>
 
       
     </div>
@@ -693,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone"><span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-remote"><span class="nav-text">git remote</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#——update-2019-3-12——"><span class="nav-text">——update 2019-3-12——</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone"><span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-remote"><span class="nav-text">git remote</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#——update-2019-3-12——"><span class="nav-text">——update 2019-3-12——</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-pull-VS-git-fetch-amp-git-merge"><span class="nav-text">git pull VS git fetch&amp;git merge</span></a></li></div>
             
 
           </div>
@@ -748,7 +751,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.8k字</span>
+  <span class="post-count">博客全站共6.1k字</span>
 </div>
 
         
